@@ -1,4 +1,4 @@
-package com.vitor.resumeai.resume_ai_backend;
+package com.vitor.resumeai;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
