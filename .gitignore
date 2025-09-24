@@ -22,3 +22,46 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+### Maven ###
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+.idea/maven.xml
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Logs ###
+*.log
+
+### Spring Boot ###
+application-*.yml
+application-*.properties
+
+### Angular ###
+node_modules/
+dist/
+.tmp/
+.angular/
+coverage/
+
+### IDEs ###
+# IntelliJ
+.idea/
+*.iws
+*.ipr
+*.iml
+
+# VSCode
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+### OS ###
+.DS_Store
+Thumbs.db
