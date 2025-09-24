@@ -1,5 +1,6 @@
 package com.vitor.resumeai.controller;
 
+import com.vitor.resumeai.dto.ResumeRequest;
 import com.vitor.resumeai.service.ResumeService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -20,12 +21,12 @@ public class ResumeController {
 
     @GetMapping("/test")
     public String test() {
-        return "Backend rodando 🚀";
+        return "Backend rodando";
     }
 
     @PostMapping("/generate-pdf")
-    public ResponseEntity<byte[]> generatePdf(@RequestBody Object request) throws IOException {
-        byte[] pdf = resumeService.generatePdfStub();
+    public ResponseEntity<byte[]> generatePdf(@RequestBody ResumeRequest request) throws IOException {
+        byte[] pdf = resumeService.generatePdfFromRequest(request);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_PDF);
         headers.set(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=curriculo.pdf");
